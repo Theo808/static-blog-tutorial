@@ -9,18 +9,20 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         .headerImg {
-            height: calc(100vh-60px);
+            height: calc(100vh - 60px)
             object-fit: cover;
         }
-        /* Diese Regel macht was sinnvolles*/
-        .fancyText:hover {
-            color:cyan
+        .popup {
+            position: fixed;
+            background-color: ;
+            bottom: 5px;
+            right: 5px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid m-0">
+    <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Unser schöner Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -49,8 +51,8 @@
 
 
     </div>
-    <div class="container-fluid">
-        <img src="header_img.jpg" class="w-100 headerImg" alt="Header Bild"> 
+    <div class="container-fluid p-0">
+        <img src="header_img.jpg" class="w-100 headerImg" alt="Header Bild">
     </div>    
     <div class="container fancyText">
 
@@ -71,6 +73,18 @@
         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
         
     </div>
+    <div class="popup bg-light p-2">
+        <h1>Newsletter</h1>
+        <p>Melde dich jetzt an!</p>
+        <input class="form-control" id="emailinput" placeholder="E-mail Adresse">
+        <input class="form-control" id="nameinput" placeholder="Name">
+        <button class="btn btn-outline-primary" id="submitbtn">Anmelden</button>
+    </div>
+    <script>
+        document.getElementById("submitbtn").addEventListener("click", function() {
+            alert("Hallo " + document.getElementById("nameinput").value)
+        });
+    </script>
 </body>
 
 </html>
