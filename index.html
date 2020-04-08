@@ -9,8 +9,12 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         .headerImg {
-            height: calc(100vh - 60px)
-            object-fit: cover;
+            height: calc(100vh - 60px);
+            background-image: url("header_img.jpg");
+            background-size: cover;
+        }
+        .headerImg h1 {
+            padding-top: 35vh;
         }
         .popup {
             position: fixed;
@@ -51,10 +55,10 @@
 
 
     </div>
-    <div class="container-fluid p-0">
-        <img src="header_img.jpg" class="w-100 headerImg" alt="Header Bild">
+    <div class="container-fluid p-0 w-100 headerImg">
+        <h1 class="text-light font-weight-bold text-center">Unser schöner Blog!</h1>
     </div>    
-    <div class="container fancyText">
+    <div class="container">
 
         What is Lorem Ipsum?
 
